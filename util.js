@@ -146,3 +146,18 @@ var obj = {
     }
 };
 console.log(getObjectLength(obj)); // 3
+
+
+// 判断是否为邮箱地址
+function isEmail(emailStr) {
+    // your implement
+    re = /^\w+@\w+.com$/
+    return re.test(str)
+}
+
+// 判断是否为手机号
+function isMobilePhone(phone) {
+    // your implement
+    re = /^1[0-9]{10}$/
+    return re.test(phone)
+}
