@@ -47,3 +47,10 @@ function simpleTrim(str) {
     }
     return newstr;
 }
+
+function trim(str) {
+    // your implement
+    var result = "";
+    result = str.replace(/^\s+|\s+$/g, "");
+    return result;
+}
