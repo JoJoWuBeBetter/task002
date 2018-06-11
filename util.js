@@ -13,7 +13,7 @@ function cloneObject(src) {
             }
             for (var value in src) {
                 if (src.hasOwnProperty(value)) {
-                    if (typeof(src[value]) === 'object') {
+                    if (typeof (src[value]) === 'object') {
                         result[value] = cloneObject(src[value]);
                     } else {
                         result[value] = src[value];
@@ -33,6 +33,17 @@ function uniqArray(arr) {
         if (newArr.indexOf(i) === -1) {
             newArr.push(i);
         }
-        }
-    return newArr;
     }
+    return newArr;
+}
+
+function simpleTrim(str) {
+    var newstr = '';
+    for (var i of str) {
+        if (!(i===' ' | i ==='  ')) {
+            console.log(i);
+            newstr += i;
+        }
+    }
+    return newstr;
+}
