@@ -4,14 +4,13 @@ function cloneObject(src) {
         if (src.constructor.name === 'Date') {
             result = src;
         } else {
-            // if (src.constructor.name === 'Object') {
-            //     console.log('Object');
-            //     result = {};
-            // } else {
-            //     console.log('Arr');
-            //     result = [];
-            // }
-            result = (src.constructor.name === 'Array') ? [] : {};
+            if (src.constructor.name === 'Object') {
+                console.log('Object');
+                result = {};
+            } else {
+                console.log('Arr');
+                result = [];
+            }
             for (var value in src) {
                 if (src.hasOwnProperty(value)) {
                     if (typeof(src[value]) === 'object') {
@@ -27,3 +26,13 @@ function cloneObject(src) {
     }
     return result;
 }
+
+function uniqArray(arr) {
+    var newArr = [];
+    for (var i of arr) {
+        if (newArr.indexOf(i) === -1) {
+            newArr.push(i);
+        }
+        }
+    return newArr;
+    }
